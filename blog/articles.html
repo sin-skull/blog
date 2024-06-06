@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
 </head>
     <style>
-        /* 基本スタイルのリセット */
+/* 基本スタイルのリセット */
 * {
     margin: 0;
     padding: 0;
@@ -29,24 +29,40 @@ main {
     margin: 2rem;
 }
 
-/* 記事の見出しのスタイル */
+/* 記事プレビューのスタイル */
 .article-preview {
-    margin-bottom: 1.5rem;
+    display: flex;
+    background: #fff;
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.article-preview h3 {
+.article-preview img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 1rem;
+    flex: 1;
+}
+
+.article-content h3 {
     color: #333;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-.article-preview p {
+.article-content p {
     color: #666;
     margin-bottom: 1rem;
 }
 
-/* 読み進めるボタンのスタイル */
-.article-preview button {
+.article-content button {
     background: #007BFF;
     color: #fff;
     border: none;
@@ -55,19 +71,37 @@ main {
     border-radius: 5px;
 }
 
-.article-preview button:hover {
+.article-content button:hover {
     background: #0056b3;
 }
-
     </style>
 <body>
     <iframe src="https://sin-skull.github.io/blog/blog/header.html"></iframe>
-    <main>
+   <main>
         <aside>
             <h2>最新の記事</h2>
-            <div id="articles"></div>
+            <div id="articles">
+                <div class="article-preview">
+                    <img src="image1.jpg" alt="記事画像">
+                    <div class="article-content">
+                        <h3>待チ人ハ来ズ - art / KOKORA</h3>
+                        <p>【アートと物語の融合】KOKORAが描く「待チ人ハ来ズ」</p>
+                        <button onclick="window.parent.location.href='https://sin-skull.github.io/blog/post/1.html'">続きを読む</button>
+                    </div>
+                </div>
+                <div class="article-preview">
+                    <img src="image2.jpg" alt="記事画像">
+                    <div class="article-content">
+                        <h3>歌の救済 - art / 卯月</h3>
+                        <p>【アートと物語の融合】卯月が描く「歌の救済」</p>
+                        <button onclick="window.parent.location.href='https://sin-skull.github.io/blog/post/2.html'">続きを読む</button>
+                    </div>
+                </div>
+                <!-- その他の記事も同様に追加 -->
+            </div>
         </aside>
     </main>
+    <footer id="footer"></footer>
     <script>
         // Function to load external HTML into a specific element
         function loadHTML(url, elementId) {
@@ -80,34 +114,32 @@ main {
         loadHTML('https://sin-skull.github.io/blog/blog/header.html', 'header');
         loadHTML('https://sin-skull.github.io/blog/blog/footer.html', 'footer');
 
-        // Articles data (this could also be fetched from an API)
-        const articles = [
-            {title: '待チ人ハ来ズ - art / KOKORA', desc: '【アートと物語の融合】KOKORAが描く「待チ人ハ来ズ」', url: 'https://sin-skull.github.io/blog/post/1.html'},
-            {title: '歌の救済 - art / 卯月', desc: '【アートと物語の融合】卯月が描く「歌の救済」', url: 'https://sin-skull.github.io/blog/post/2.html'},
-            {title: 'ヴィラン - art / こうせい', desc: '【アートと物語の世界】KOUSEIが描く「ヴィラン」', url: 'https://sin-skull.github.io/blog/post/3.html'},
-            {title: 'カシック - art / フェイ', desc: '【夢のような風景】フェイが描く「カシック」', url: 'https://sin-skull.github.io/blog/post/4.html'},
-            {title: '赤い足跡 - art / 夜行猫介', desc: '【不気味な都市の影】夜行猫介が描く「赤い足跡」', url: 'https://sin-skull.github.io/blog/post/5.html'},
-            {title: '二度目の桜 - art / こうせい', desc: '【命の桜】こうせいが描く「二度目の桜」', url: 'https://sin-skull.github.io/blog/post/6.html'},
-            {title: 'オアシス - art / マスダ', desc: '【廃墟の中の希望】マスダが描く「オアシス」', url: 'https://sin-skull.github.io/blog/post/7.html'}
-        ];
-
-        // Function to create article previews
+        // Function to create article previews dynamically (if needed)
         function createArticlePreviews() {
             const articlesContainer = document.getElementById('articles');
+            const articles = [
+                // Example data, fetch or use real data here
+                {img: 'image1.jpg', title: '待チ人ハ来ズ - art / KOKORA', desc: '【アートと物語の融合】KOKORAが描く「待チ人ハ来ズ」', url: 'https://sin-skull.github.io/blog/post/1.html'},
+                {img: 'image2.jpg', title: '歌の救済 - art / 卯月', desc: '【アートと物語の融合】卯月が描く「歌の救済」', url: 'https://sin-skull.github.io/blog/post/2.html'}
+            ];
+
             articles.forEach(article => {
                 const articleDiv = document.createElement('div');
                 articleDiv.className = 'article-preview';
                 articleDiv.innerHTML = `
-                    <h3>${article.title}</h3>
-                    <p>${article.desc}</p>
-                    <button onclick="window.parent.location.href='${article.url}'">続きを読む</button>
+                    <img src="${article.img}" alt="記事画像">
+                    <div class="article-content">
+                        <h3>${article.title}</h3>
+                        <p>${article.desc}</p>
+                        <button onclick="window.parent.location.href='${article.url}'">続きを読む</button>
+                    </div>
                 `;
                 articlesContainer.appendChild(articleDiv);
             });
         }
 
-        // Create article previews on page load
-        createArticlePreviews();
+        // Call function to create article previews dynamically (if needed)
+        // createArticlePreviews();
     </script>
     <iframe src="https://sin-skull.github.io/blog/blog/footer.html"></iframe><script src="https://sin-skull.github.io/blog/blog/animations.js"></script>
 </body>
