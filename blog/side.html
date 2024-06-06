@@ -2,13 +2,25 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>サイドバー</title>
+    <title>最新の記事</title>
     <link rel="stylesheet" href="burogu.css">
 </head>
 <body>
-    <aside contenteditable="true">
-        <h2>サイドバー</h2>
-        <p>サイドバーの内容を書きます。ここには最新の記事リンクや人気のコンテンツを表示すると良いでしょう。</p>
+    <aside>
+        <h2>最新の記事</h2>
+        <div class="article-preview">
+            <h3>記事タイトル1</h3>
+            <button onclick="location.href='article1.html'">続きを読む</button>
+        </div>
+        <div class="article-preview">
+            <h3>記事タイトル2</h3>
+            <button onclick="location.href='article2.html'">続きを読む</button>
+        </div>
+        <div class="article-preview">
+            <h3>記事タイトル3</h3>
+            <button onclick="location.href='article3.html'">続きを読む</button>
+        </div>
+        <!-- 追加の記事も同様に追加 -->
     </aside>
 </body>
 </html>
