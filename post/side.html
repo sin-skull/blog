@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>最新の記事</title>
+    <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
+</head> 
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        aside {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h2 {
+            margin-bottom: 1rem;
+        }
+
+        .article-preview {
+            margin-bottom: 1rem;
+        }
+
+        .article-preview h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .article-preview button {
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .article-preview button:hover {
+            background-color: #ddd;
+        }
+    </style>
+<body>
+    <aside>
+        <h2>最新の記事</h2>
+        <div class="article-preview">
+            <h3>記事</h3>
+            <p>内容</p>
+            <button onclick="window.parent.location.href='1.html'">続きを読む</button>
+        </div>
+        <div class="article-preview">
+            <h3>記事</h3>
+            <p>内容</p>
+            <button onclick="window.parent.location.href='1.html'">続きを読む</button>        </div>
+                <div class="article-preview">
+            <h3>記事</h3>
+            <p>内容</p>
+            <button onclick="window.parent.location.href='1.html'">続きを読む</button>        </div>
+        <!-- 追加の記事も同様に追加 -->
+    </aside>
+</body>
+</html>

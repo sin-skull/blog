@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール</title>
+    <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let clickCount = 0;
+        const h1Element = document.querySelector('.contact h1');
+
+        h1Element.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount >= 10) {
+                window.open('https://sin-skull.github.io/blog/blog/html.html', '_blank');
+                clickCount = 0;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<iframe src="https://sin-skull.github.io/blog/blog/header.html"></iframe>
+
+<main>
+    <section class="contact">
+        <h1>プロフィール</h1>
+            <div class="profile-content">
+                <img src="https://sin-skull.github.io/blog/blog/profile.jpg" alt="プロフィール写真" class="profile-photo">
+                <p>ここに自己紹介や経歴などを書きます。趣味や興味、これまでの活動についてなど。</p>
+            </div>
+        </section>
+    </main>
+
+    <iframe src="https://sin-skull.github.io/blog/blog/footer.html"></iframe><script src="https://sin-skull.github.io/blog/blog/animations.js"></script>
+</body>
+</html>

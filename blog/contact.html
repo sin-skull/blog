@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
+    <style>
+body, html {
+
+
+text-align: center;
+}
+
+iframe {
+    width: 100%;
+
+}
+
+main {
+ 
+
+    justify-content: center;
+   
+}
+
+.contact-container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let clickCount = 0;
+            const h1Element = document.querySelector('.contact h1');
+
+            h1Element.addEventListener('click', function() {
+                clickCount++;
+                if (clickCount >= 10) {
+                    window.open('index.html', '_blank');
+                    clickCount = 0;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <iframe src="https://sin-skull.github.io/blog/blog/header.html"></iframe>
+
+    <main>
+        <section class="contact">
+            <h1>お問い合わせ</h1>
+            
+                    <p>ご質問やご意見、お仕事のご依頼など、お気軽にメールにてお問い合わせください。</p>
+            
+                    <section>
+                        <h2>メールアドレス:</h2>
+                        <p><a href="メールアドレス"></a>.gmail.com</a></p>
+                    </section>
+            
+                    <section>
+                        <h2>ご返信について:</h2>
+                        <p>確認できましたらご返信いたしますが、内容によってはお時間を頂く場合がございます。予めご了承ください。</p>
+                    </section>
+            
+                    <section>
+                        <h2>プライバシーポリシー:</h2>
+                        <p>ご提供いただいた個人情報は、お問い合わせの対応にのみ使用し、他の目的で使用することはありません。</p>
+                    </section>
+    </main>
+
+    <iframe src="https://sin-skull.github.io/blog/blog/footer.html"></iframe><script src="https://sin-skull.github.io/blog/blog/animations.js"></script>
+</body>
+</html>

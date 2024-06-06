@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム</title>
+    <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
+    <style>
+        .hero {
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .hero button:hover {
+            background-color: #45a049;
+        }
+
+        .latest-articles {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .latest-articles h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .articles-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .articles-grid article {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 100px;
+            padding: 1rem;
+            flex: 1 1 calc(33% - 2rem);
+            max-width: calc(33% - 2rem);
+        }
+
+        .articles-grid article h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .articles-grid article p {
+            color: #666;
+        }
+
+        .articles-grid article img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid article {
+                flex: 1 1 calc(100% - 2rem);
+                max-width: calc(100% - 2rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://sin-skull.github.io/blog/blog/header.html"></iframe>
+
+    <main>
+        <section class="hero">
+            <h1>blogへようこそ</h1>
+            <p>ここでは様々な興味深い記事をお届けします。あなたの日常にプラスワンのひと時を。</p>
+            <button onclick="location.href='articles.html'">記事一覧を見る</button>
+        </section>
+
+        <section class="latest-articles">
+            <h2>最新の記事</h2>
+            <p>毎日がもっと楽しくなる、最新の情報をお届けします。</p>
+            <div class="articles-grid">
+                <article>
+                    <h3><a href="https://sin-skull.github.io/blog/blog/articles.html" target="_parent">記事一覧</a></h3>
+                    <p>記事一覧が表示されます。新たな発見とインスピレーションをお楽しみください。</p>
+                </article>
+                <article>
+                    <h3><a href="https://sin-skull.github.io/blog/blog/profile.html" target="_parent">プロフィール</a></h3>
+                    <p>管理者のプロフィールが表示されます。今すぐチェックしてみましょう！</p>
+                </article>
+                <article>
+                    <h3><a href="https://sin-skull.github.io/blog/blog/contact.html" target="_parent">お問い合わせ</a></h3>
+                    <p>お問い合わせが表示されます。貴重なご意見はこちらまで</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <iframe src="fhttps://sin-skull.github.io/blog/blog/ooter.html"></iframe><script src="https://sin-skull.github.io/blog/blog/animations.js"></script>
+</body>
+</html>
