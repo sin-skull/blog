@@ -4,103 +4,69 @@
     <meta charset="UTF-8">
     <title>最新の記事</title>
     <link rel="stylesheet" href="https://sin-skull.github.io/blog/blog/burogu.css">
-</head> 
-       <style>
-        /* 基本スタイルのリセット */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
-/* ボディのスタイル */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+        aside {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-/* メインコンテンツのスタイル */
-main {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-}
+        aside h2 {
+            margin-bottom: 1rem;
+        }
 
-/* サイドバーのスタイル */
-aside {
-    width: 800px;
-    padding: 1rem;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+        .article-preview {
+            margin-bottom: 1rem;
+        }
 
-/* 記事プレビューのスタイル */
-.article-preview {
-    display: flex;
-    background: #fff;
-    margin-bottom: 2rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+        .article-preview h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
 
-.article-preview img {
-    width: 100px;
-    height: auto;
-    object-fit: cover;
-}
+        .article-preview button {
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
 
-.article-content {
-    padding: 1rem;
-    flex: 1;
-}
-
-.article-content h3 {
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.article-content p {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.article-content button {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.article-content button:hover {
-    background: #0056b3;
-}
-
+        .article-preview button:hover {
+            background-color: #ddd;
+        }
     </style>
+</head> 
 <body>
-   <main>
+    <iframe src="https://sin-skull.github.io/blog/blog/header.html" style="width: 100%; border: none;"></iframe>
+    <main>
         <aside>
             <h2>最新の記事</h2>
             <div id="articles"></div>
         </aside>
     </main>
-   
+    <iframe src="https://sin-skull.github.io/blog/blog/footer.html" style="width: 100%; border: none;"></iframe>
     <script>
         // 記事データ
         const articles = [
-            {img: 'https://sin-skull.github.io/picture/kikaku/kokora.png', title: '待チ人ハ来ズ - art / KOKORA', desc: '【アートと物語の融合】KOKORAが描く「待チ人ハ来ズ」', url: 'https://sin-skull.github.io/blog/post/1.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/uduki.png', title: '歌の救済 - art / 卯月', desc: '【アートと物語の融合】卯月が描く「歌の救済」', url: 'https://sin-skull.github.io/blog/post/2.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/kousei2.png', title: 'ヴィラン - art / こうせい', desc: '【アートと物語の世界】KOUSEIが描く「ヴィラン」', url: 'https://sin-skull.github.io/blog/post/3.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/fuei.png', title: 'カシック - art / フェイ', desc: '【夢のような風景】フェイが描く「カシック」', url: 'https://sin-skull.github.io/blog/post/4.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/nekosuke.png', title: '赤い足跡 - art / 夜行猫介', desc: '【不気味な都市の影】夜行猫介が描く「赤い足跡」', url: 'https://sin-skull.github.io/blog/post/5.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/kousei1.png', title: '二度目の桜 - art / こうせい', desc: '【命の桜】こうせいが描く「二度目の桜」', url: 'https://sin-skull.github.io/blog/post/6.html'},
-            {img: 'https://sin-skull.github.io/picture/kikaku/masuda.png', title: 'オアシス - art / マスダ', desc: '【廃墟の中の希望】マスダが描く「オアシス」', url: 'https://sin-skull.github.io/blog/post/7.html'}
+            {title: '待チ人ハ来ズ - art / KOKORA', desc: '【アートと物語の融合】KOKORAが描く「待チ人ハ来ズ」', url: 'https://sin-skull.github.io/blog/post/1.html'},
+            {title: '歌の救済 - art / 卯月', desc: '【アートと物語の融合】卯月が描く「歌の救済」', url: 'https://sin-skull.github.io/blog/post/2.html'},
+            {title: 'ヴィラン - art / こうせい', desc: '【アートと物語の世界】KOUSEIが描く「ヴィラン」', url: 'https://sin-skull.github.io/blog/post/3.html'},
+            {title: 'カシック - art / フェイ', desc: '【夢のような風景】フェイが描く「カシック」', url: 'https://sin-skull.github.io/blog/post/4.html'},
+            {title: '赤い足跡 - art / 夜行猫介', desc: '【不気味な都市の影】夜行猫介が描く「赤い足跡」', url: 'https://sin-skull.github.io/blog/post/5.html'},
+            {title: '二度目の桜 - art / こうせい', desc: '【命の桜】こうせいが描く「二度目の桜」', url: 'https://sin-skull.github.io/blog/post/6.html'},
+            {title: 'オアシス - art / マスダ', desc: '【廃墟の中の希望】マスダが描く「オアシス」', url: 'https://sin-skull.github.io/blog/post/7.html'}
         ];
 
         // 記事プレビューを動的に生成する関数
@@ -110,12 +76,9 @@ aside {
                 const articleDiv = document.createElement('div');
                 articleDiv.className = 'article-preview';
                 articleDiv.innerHTML = `
-                    <img src="${article.img}" alt="記事画像">
-                    <div class="article-content">
-                        <h3>${article.title}</h3>
-                        <p>${article.desc}</p>
-                        <button onclick="window.parent.location.href='${article.url}'">続きを読む</button>
-                    </div>
+                    <h3>${article.title}</h3>
+                    <p>${article.desc}</p>
+                    <button onclick="window.parent.location.href='${article.url}'">続きを読む</button>
                 `;
                 articlesContainer.appendChild(articleDiv);
             });
@@ -124,6 +87,5 @@ aside {
         // ページ読み込み時に記事プレビューを生成
         createArticlePreviews();
     </script>
-
 </body>
 </html>
